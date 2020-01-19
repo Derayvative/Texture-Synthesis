@@ -17,5 +17,8 @@ In general, this program is intended to be used when the user has a somewhat sma
 
 ### Examples
 
-![Pasta](Results/pasta.jpg)
-
+| Before        | After         |
+| ------------- |:-------------:|
+| ![Pasta](Results/pasta.jpg)    | ![Pasta](Results/pasta.bmp) |
+| col 2 is      | centered      |
+| zebra stripes | are neat      |
