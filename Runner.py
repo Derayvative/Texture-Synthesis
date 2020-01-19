@@ -6,21 +6,20 @@ from RandomPatchSelector import RandomPatchSelector
 
 
 def main():
-    img = Image.open('pollock.JPG')
+    img = Image.open('pasta.jpg')
     ary = np.array(img)
     #ary[y-coordinate][x-coordinate]
-
-    patchsize = 24
-    frontierSize = patchsize // 6
+    patchsize = 60
+    frontierSize = patchsize // 2
+    step = 30
     patches = RandomPatchSelector()
-
-    print(str(ary.shape[1] - patchsize) + " " + str(ary.shape))
-    for i in range(0, ary.shape[0] + 1 - patchsize - 2 * frontierSize, frontierSize):
-        for j in range(0, ary.shape[1] + 1 - patchsize - 2 * frontierSize, frontierSize):
+    for i in range(0, ary.shape[0] + 1 - patchsize - 2 * frontierSize, step):
+        for j in range(0, ary.shape[1] + 1 - patchsize - 2 * frontierSize, step):
             #print(str(i + patchsize - 1), str(j + patchsize - 1))
-            patch = ImagePatch((i,j), (i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1), ary,frontierSize)
+            patch = ImagePatch((i,j), (i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1), ary, frontierSize)
+            #print((i,j),(i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1))
             patches.addPatch(patch)
-    product = patches.buildSimpleQuilt(200,200)
+    product = patches.buildSimpleQuilt(1000,1000)
     im = Image.fromarray(product.astype(np.uint8))
     im.save('road.bmp')
     # Split the three channels
