@@ -21,4 +21,5 @@ In general, this program is intended to be used when the user has a somewhat sma
 | ------------- |:-------------:|
 | ![Pasta](Results/pasta.jpg)    | ![Pasta](Results/pastaAfter.jpg) |
 | ![Water](Results/water.jpg)  | ![Water](Results/waterAfter.jpg) |
-| zebra stripes | are neat      |
+| ![Honey](Results/honeycomb.jpg)  | ![Water](Results/honeycombAfter.jpg) |
+| ![Wall](Results/wall.JPG)  | ![Wall](Results/wall2.jpg) |

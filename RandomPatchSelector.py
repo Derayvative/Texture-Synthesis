@@ -17,7 +17,7 @@ class RandomPatchSelector:
         self.patches = list()
         self.frontierSize = -1
         self.interiorSize = -1
-        self.tolerance = 1.2
+        self.tolerance = 1.05
 
     def addPatch(self, patch:ImagePatch, weight=1):
         if weight <= 0:
