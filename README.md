@@ -19,6 +19,6 @@ In general, this program is intended to be used when the user has a somewhat sma
 
 | Before        | After         |
 | ------------- |:-------------:|
-| ![Pasta](Results/pasta.jpg)    | ![Pasta](Results/pasta.bmp) |
+| ![Pasta](Results/pasta.jpg)    | ![Pasta](Results/pastaAfter.jpg) |
 | col 2 is      | centered      |
 | zebra stripes | are neat      |
