@@ -21,7 +21,7 @@ def main():
             patches.addPatch(patch)
     product = patches.buildSimpleQuilt(1000,1000)
     im = Image.fromarray(product.astype(np.uint8))
-    im.save('road.bmp')
+    im.save('pastaAfter.bmp')
     # Split the three channels
     #r, g, b = np.split(ary, 3, axis=2)
 
@@ -36,7 +36,7 @@ def main():
     bitmap = np.array(bitmap).reshape([ary.shape[0], ary.shape[1]])
     bitmap = np.dot((bitmap > 128).astype(float), 255)
     im = Image.fromarray(bitmap.astype(np.uint8))
-    im.save('road.bmp')
+    im.save('pastaAfter.bmp')
     '''
 
 if __name__ == '__main__':
