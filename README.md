@@ -1,4 +1,4 @@
-# Texture Synthesis for Irregularly Arranged Patterns
+# Texture Synthesis for Irregularly Arranged Image Compositions
 Given a small image (.jpg or .png) of a pattern that consists of some element repeating in a random or irregular manner, this program will attempt to create a larger image of specified size that follows the same pattern. The general algorithm used is a slightly modified version of the algorithm discussed in [this paper](https://people.eecs.berkeley.edu/~efros/research/quilting/quilting.pdf)
 ## General Description
 
@@ -17,8 +17,8 @@ In general, this program is intended to be used when the user has a somewhat sma
 
 ### Examples
 
-| Before        | After         |
+| Initial Texture       | Generated Large Texture         |
 | ------------- |:-------------:|
 | ![Pasta](Results/pasta.jpg)    | ![Pasta](Results/pastaAfter.jpg) |
-| col 2 is      | centered      |
+| ![Water](Results/water.jpg)  | ![Water](Results/waterAfter.jpg) |
 | zebra stripes | are neat      |

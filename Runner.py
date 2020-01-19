@@ -6,12 +6,12 @@ from RandomPatchSelector import RandomPatchSelector
 
 
 def main():
-    img = Image.open('pasta.jpg')
+    img = Image.open('water.jpg')
     ary = np.array(img)
     #ary[y-coordinate][x-coordinate]
-    patchsize = 60
-    frontierSize = patchsize // 2
-    step = 30
+    patchsize = 30
+    frontierSize = patchsize // 6
+    step = 10
     patches = RandomPatchSelector()
     for i in range(0, ary.shape[0] + 1 - patchsize - 2 * frontierSize, step):
         for j in range(0, ary.shape[1] + 1 - patchsize - 2 * frontierSize, step):
@@ -19,9 +19,9 @@ def main():
             patch = ImagePatch((i,j), (i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1), ary, frontierSize)
             #print((i,j),(i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1))
             patches.addPatch(patch)
-    product = patches.buildSimpleQuilt(1000,1000)
+    product = patches.buildSimpleQuilt(512,512)
     im = Image.fromarray(product.astype(np.uint8))
-    im.save('pastaAfter.bmp')
+    im.save('waterAfter.jpg')
     # Split the three channels
     #r, g, b = np.split(ary, 3, axis=2)
 
