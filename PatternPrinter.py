@@ -4,14 +4,15 @@ import numpy as np
 from ImagePatch import ImagePatch
 from RandomPatchSelector import RandomPatchSelector
 
-
+#Work in progress. This will be used to recreate an image using a certain texture (e.g. creating abraham lincoln with a toast texture)
 def main():
-    img = Image.open('green.jpg')
+    img = Image.open('honeycombAfter.jpg')
     ary = np.array(img)
     #ary[y-coordinate][x-coordinate]
-    patchsize = 25
+    imgToPrint = Image.open("uttower.jpg")
+    patchsize = 35
     frontierSize = patchsize // 6
-    step = 25
+    step = 35
     patches = RandomPatchSelector()
     for i in range(0, ary.shape[0] + 1 - patchsize - 2 * frontierSize, step):
         for j in range(0, ary.shape[1] + 1 - patchsize - 2 * frontierSize, step):
@@ -19,7 +20,8 @@ def main():
             patch = ImagePatch((i,j), (i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1), ary, frontierSize)
             #print((i,j),(i + patchsize + 2 * frontierSize - 1, j + patchsize + 2 * frontierSize - 1))
             patches.addPatch(patch)
-    product = patches.buildSimpleQuilt(256,256)
+    printArray = np.array(imgToPrint)
+    product = patches.buildImprintQuilt(printArray.shape[0], printArray.shape[1], printArray)
     im = Image.fromarray(product.astype(np.uint8))
     im.save('honeycombAfter.jpg')
     # Split the three channels

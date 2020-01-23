@@ -10,6 +10,7 @@ First, one of these smaller squares is selected at random to be placed in the to
 
 Finally, a dynamic programming-based approach using [seam carving](https://en.wikipedia.org/wiki/Seam_carving#Improvements_and_extensions) is done to find an optimal boundary between the left and right periphery to minimize the visual differences. In addition, a simple blur is also applied.
 
+Some parts are still a work in progress.
 
 ## Intended Use
 

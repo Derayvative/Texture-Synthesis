@@ -1,0 +1,6 @@
+ssh-keygen -t rsa -f ~/.ssh/utlab
+  data=`cat ~/.ssh/utlab.pub` && ssh raymond@atlas-moth.cs.utexas.edu " echo $data >> ~/.ssh/authorized_keys"
+  ssh -i ~/.ssh/utlab raymond@linux.cs.utexas.edu
+
+
+y = underPow;                                                                                                           x = underPow - abs(midPoint - underPow); 
